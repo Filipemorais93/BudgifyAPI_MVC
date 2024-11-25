@@ -1,0 +1,6 @@
+@BudgifyAPI.Wallet_HostAddress = http://localhost:5193
+
+GET {{BudgifyAPI.Wallet_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,7 @@
+C:\Users\FilipeMorais\Desktop\API_Budgify\BudgifyAPI\BudgifyAPI.Wallet\obj\Debug\net8.0\BudgifyAPI.Wallets.csproj.AssemblyReference.cache
+C:\Users\FilipeMorais\Desktop\API_Budgify\BudgifyAPI\BudgifyAPI.Wallet\obj\Debug\net8.0\BudgifyAPI.Wallets.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\FilipeMorais\Desktop\API_Budgify\BudgifyAPI\BudgifyAPI.Wallet\obj\Debug\net8.0\BudgifyAPI.Wallets.AssemblyInfoInputs.cache
+C:\Users\FilipeMorais\Desktop\API_Budgify\BudgifyAPI\BudgifyAPI.Wallet\obj\Debug\net8.0\BudgifyAPI.Wallets.AssemblyInfo.cs
+C:\Users\FilipeMorais\Desktop\API_Budgify\BudgifyAPI\BudgifyAPI.Wallet\obj\Debug\net8.0\BudgifyAPI.Wallets.csproj.CoreCompileInputs.cache
+C:\Users\FilipeMorais\Desktop\API_Budgify\BudgifyAPI\BudgifyAPI.Wallet\obj\Debug\net8.0\BudgifyAPI.Wallets.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\FilipeMorais\Desktop\API_Budgify\BudgifyAPI\BudgifyAPI.Wallet\obj\Debug\net8.0\BudgifyAPI.Wallets.MvcApplicationPartsAssemblyInfo.cache

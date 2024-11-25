@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "G:\\API_Budgify\\BudgifyAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0A021542-D39A-47E2-A30D-817F0C12916B}|BudifyAPI.Users\\BudifyAPI.Users.csproj|g:\\api_budgify\\budgifyapi\\budifyapi.users\\services\\transactions\\transactionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A021542-D39A-47E2-A30D-817F0C12916B}|BudifyAPI.Users\\BudifyAPI.Users.csproj|solutionrelative:budifyapi.users\\services\\transactions\\transactionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A021542-D39A-47E2-A30D-817F0C12916B}|BudifyAPI.Users\\BudifyAPI.Users.csproj|g:\\api_budgify\\budgifyapi\\budifyapi.users\\services\\transactions\\interfacetransactions\\itransactionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A021542-D39A-47E2-A30D-817F0C12916B}|BudifyAPI.Users\\BudifyAPI.Users.csproj|solutionrelative:budifyapi.users\\services\\transactions\\interfacetransactions\\itransactionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A021542-D39A-47E2-A30D-817F0C12916B}|BudifyAPI.Users\\BudifyAPI.Users.csproj|g:\\api_budgify\\budgifyapi\\budifyapi.users\\services\\usersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A021542-D39A-47E2-A30D-817F0C12916B}|BudifyAPI.Users\\BudifyAPI.Users.csproj|solutionrelative:budifyapi.users\\services\\usersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UsersService.cs",
+              "DocumentMoniker": "G:\\API_Budgify\\BudgifyAPI\\BudifyAPI.Users\\Services\\UsersService.cs",
+              "RelativeDocumentMoniker": "BudifyAPI.Users\\Services\\UsersService.cs",
+              "ToolTip": "G:\\API_Budgify\\BudgifyAPI\\BudifyAPI.Users\\Services\\UsersService.cs",
+              "RelativeToolTip": "BudifyAPI.Users\\Services\\UsersService.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAA1wEsAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T12:19:48.319Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ITransactionService.cs",
+              "DocumentMoniker": "G:\\API_Budgify\\BudgifyAPI\\BudifyAPI.Users\\Services\\Transactions\\InterfaceTransactions\\ITransactionService.cs",
+              "RelativeDocumentMoniker": "BudifyAPI.Users\\Services\\Transactions\\InterfaceTransactions\\ITransactionService.cs",
+              "ToolTip": "G:\\API_Budgify\\BudgifyAPI\\BudifyAPI.Users\\Services\\Transactions\\InterfaceTransactions\\ITransactionService.cs",
+              "RelativeToolTip": "BudifyAPI.Users\\Services\\Transactions\\InterfaceTransactions\\ITransactionService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T11:33:58.094Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TransactionService.cs",
+              "DocumentMoniker": "G:\\API_Budgify\\BudgifyAPI\\BudifyAPI.Users\\Services\\Transactions\\TransactionService.cs",
+              "RelativeDocumentMoniker": "BudifyAPI.Users\\Services\\Transactions\\TransactionService.cs",
+              "ToolTip": "G:\\API_Budgify\\BudgifyAPI\\BudifyAPI.Users\\Services\\Transactions\\TransactionService.cs",
+              "RelativeToolTip": "BudifyAPI.Users\\Services\\Transactions\\TransactionService.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAA8wD8AAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T11:33:06.451Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

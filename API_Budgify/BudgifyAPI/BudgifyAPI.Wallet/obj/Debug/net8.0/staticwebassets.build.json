@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "bkXF0nQDygV1pGpbmX3EOqrO6+VPUAeZG++mitP/LK0=",
+  "Source": "BudgifyAPI.Wallet",
+  "BasePath": "_content/BudgifyAPI.Wallet",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
