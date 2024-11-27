@@ -29,9 +29,8 @@ public partial class UsersContext : DbContext
 
         modelBuilder.Entity<User>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("user");
+            entity.HasKey(e => e.IdUser).HasName("user_pkey");
+                entity.ToTable("user");
 
             entity.Property(e => e.AllowWalletWatch)
                 .HasDefaultValue(true)
@@ -64,9 +63,8 @@ public partial class UsersContext : DbContext
 
         modelBuilder.Entity<UserGroup>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("user_group");
+            entity.HasKey(e => e.IdUserGroup).HasName("user_group_pkey");
+              entity.ToTable("user_group");
 
             entity.Property(e => e.IdUserGroup)
                 .HasDefaultValueSql("uuid_generate_v4()")

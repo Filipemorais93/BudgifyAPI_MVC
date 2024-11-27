@@ -15,7 +15,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IUsersService, UsersService>();
-builder.Services.AddScoped<IWalletService,WalletService>()
+builder.Services.AddScoped<IWalletService, WalletService>();
 
 builder.Services.AddDbContext<UsersContext>(
     options =>

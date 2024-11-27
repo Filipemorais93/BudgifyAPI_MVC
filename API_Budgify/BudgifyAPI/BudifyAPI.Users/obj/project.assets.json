@@ -2679,16 +2679,17 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\API_Budgify\\BudgifyAPI\\BudifyAPI.Users\\BudifyAPI.Users.csproj",
+      "projectUniqueName": "C:\\Users\\FilipeMorais\\Documents\\MEI\\Relatórios\\BudgifyAPI_MVC\\API_Budgify\\BudgifyAPI\\BudifyAPI.Users\\BudifyAPI.Users.csproj",
       "projectName": "BudifyAPI.Users",
-      "projectPath": "G:\\API_Budgify\\BudgifyAPI\\BudifyAPI.Users\\BudifyAPI.Users.csproj",
+      "projectPath": "C:\\Users\\FilipeMorais\\Documents\\MEI\\Relatórios\\BudgifyAPI_MVC\\API_Budgify\\BudgifyAPI\\BudifyAPI.Users\\BudifyAPI.Users.csproj",
       "packagesPath": "C:\\Users\\FilipeMorais\\.nuget\\packages\\",
-      "outputPath": "G:\\API_Budgify\\BudgifyAPI\\BudifyAPI.Users\\obj\\",
+      "outputPath": "C:\\Users\\FilipeMorais\\Documents\\MEI\\Relatórios\\BudgifyAPI_MVC\\API_Budgify\\BudgifyAPI\\BudifyAPI.Users\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
+        "C:\\NuGet.Config",
         "C:\\Users\\FilipeMorais\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -2697,10 +2698,8 @@
         "net8.0"
       ],
       "sources": {
-        "C:\\PROGRAM FILES\\DOTNET\\library-packs": {},
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "D:\\API\\WebApplication1": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://nuget.devexpress.com/T9PlFrFveKhhANAAe7QQzSVDtKS97EFZ4Sm4IxMlTKUbYPXQ4c/api": {}
       },
       "frameworks": {
         "net8.0": {
@@ -2716,8 +2715,9 @@
       "restoreAuditProperties": {
         "enableAudit": "true",
         "auditLevel": "low",
-        "auditMode": "direct"
-      }
+        "auditMode": "all"
+      },
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net8.0": {
@@ -2771,7 +2771,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\PROGRAM FILES\\DOTNET\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\PROGRAM FILES\\DOTNET\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

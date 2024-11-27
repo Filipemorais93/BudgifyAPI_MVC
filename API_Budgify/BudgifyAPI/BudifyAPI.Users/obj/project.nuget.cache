@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jeLwF4btoaQ=",
+  "dgSpecHash": "CdWxQ162T3Y=",
   "success": true,
-  "projectFilePath": "G:\\API_Budgify\\BudgifyAPI\\BudifyAPI.Users\\BudifyAPI.Users.csproj",
+  "projectFilePath": "C:\\Users\\FilipeMorais\\Documents\\MEI\\Relatórios\\BudgifyAPI_MVC\\API_Budgify\\BudgifyAPI\\BudifyAPI.Users\\BudifyAPI.Users.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\FilipeMorais\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\FilipeMorais\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",

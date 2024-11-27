@@ -17,7 +17,7 @@ namespace BudifyAPI.Users.Controllers
         }
 
         [HttpPost("AddUserGroup")]
-        public async Task<IActionResult> AddUserGroup(UserGroup userGroup)
+        public async Task<IActionResult> AddUserGroup([FromBody] UserGroup userGroup)
         {
             var result = await _usersService.AddUserGroup(userGroup);
             if(result != null)
@@ -25,8 +25,8 @@ namespace BudifyAPI.Users.Controllers
             return BadRequest();
         }
 
-        [HttpPut("UpdateUserGroup")]
-        public async Task<IActionResult> UpdateUserGroup(UserGroup userGroup)
+        [HttpPut("UpdateUserGroup/id_user_group")]
+        public async Task<IActionResult> UpdateUserGroup([FromBody] UserGroup userGroup)
         {
             var result = await _usersService.UpdateUserGroup(userGroup);
             if(result != null)
@@ -35,7 +35,7 @@ namespace BudifyAPI.Users.Controllers
         }
 
         [HttpDelete("DeleteUserGroup")]
-        public async Task<IActionResult> DeleteUserGroup(UserGroup userGroup)
+        public async Task<IActionResult> DeleteUserGroup([FromBody] UserGroup userGroup)
         {
             var result = await _usersService.DeleteUserGroup(userGroup);
             if (result != null)
@@ -45,7 +45,7 @@ namespace BudifyAPI.Users.Controllers
         }
 
         [HttpGet("GetAllUserGroup/id_user_group")]
-        public async Task<IActionResult> GetAllUserGroup(Guid userGroupId)
+        public async Task<IActionResult> GetAllUserGroup([FromBody] Guid userGroupId)
         {
             var result = await _usersService.GetAllUserGroup(userGroupId);
             if(result != null)
@@ -54,81 +54,81 @@ namespace BudifyAPI.Users.Controllers
         }
 
         [HttpPost("AddUserToUserGroup")]
-        public async Task<IActionResult> AddUserToUserGroup(User user, UserGroup userGroup)
+        public async Task<IActionResult> AddUserToUserGroup([FromBody] User user)
         {
-            var result = await _usersService.AddUserToUserGroup(user, userGroup);
+            var result = await _usersService.AddUserToUserGroup(user);
             if(result != null)
                 return Ok(result);
             return BadRequest();
         }
 
-        [HttpPut("DeleteUserFromUserGroup")]
-        public async Task<IActionResult> DeleteUserFromUserGroup(User user, UserGroup userGroup)
+        [HttpDelete("DeleteUserFromUserGroup")]
+        public async Task<IActionResult> DeleteUserFromUserGroup([FromBody]User user)
         {
-            var result = await _usersService.DeleteUserFromUserGroup(user, userGroup);  
+            var result = await _usersService.DeleteUserFromUserGroup(user);  
             if(result != null)
                 return Ok(result);
             return BadRequest();
         }
 
-        [HttpPut("AddManagerToUserGroup")]
-        public async Task<IActionResult> AddManagerToUserGroup(User user, UserGroup userGroup)
+        [HttpPost("AddManagerToUserGroup")]
+        public async Task<IActionResult> AddManagerToUserGroup([FromBody] User user)
         {
-            var result = await _usersService.AddManagerToUserGroup(user, userGroup);
+            var result = await _usersService.AddManagerToUserGroup(user);
             if(result != null)
                 return Ok(result);
             return BadRequest();
         }
 
-        [HttpPut("DeleteManagerToUserGroup")]
-        public async Task<IActionResult> DeleteManagerToUserGroup(User user, UserGroup userGroup)
+        [HttpDelete("DeleteManagerToUserGroup")]
+        public async Task<IActionResult> DeleteManagerToUserGroup([FromBody] User user)
         {
-            var result = _usersService.DeleteManagerToUserGroup(user, userGroup);
+            var result = await _usersService.DeleteManagerToUserGroup(user);
             if(result != null) 
                 return Ok(result);
             return BadRequest();
         }
 
         [HttpPost("AddUser")]
-        public async Task<IActionResult> AddUser(User user)
+        public async Task<IActionResult> AddUser([FromBody] User user)
         {
-            var result = _usersService.AddUser(user);
+            var result = await _usersService.AddUser(user);
             if(result != null) 
                 return Ok(result);
             return BadRequest();
         }
 
         [HttpPut("UpdateUser/id_user")]
-        public async Task<IActionResult> UpdateUser(User userId)
+        public async Task<IActionResult> UpdateUser([FromBody] User userId)
         {
-            var result = _usersService.UpdateUser(userId);
+            var result = await _usersService.UpdateUser(userId);
             if(result != null)  
                 return Ok(result);
             return BadRequest();
         }
 
-        [HttpPut("DeleteUser/id_user")]
-        public async Task<IActionResult> DeleteUser(Guid userId)
+        [HttpDelete("DeleteUser/id_user")]
+        public async Task<IActionResult> DeleteUser([FromBody] Guid userId)
         {
-            var result = (_usersService.DeleteUser(userId));
+            var result = await _usersService.DeleteUser(userId);
             if(result != null)
                 return Ok(result);
             return BadRequest();
         }
 
         [HttpGet("GetUsers")]
-        public async Task<IActionResult> GetUsers(User user)
+        public async Task<IActionResult> GetUsers()
         {
-            var result = _usersService.GetUsers(user);
+            var result = await _usersService.GetUsers();
             if(result != null)
                 return Ok(result);
             return BadRequest();
         }
 
         [HttpGet("GetUserById/id_user")]
-        public async Task<IActionResult> GetUserById(Guid userId)
+        public async Task<IActionResult> GetUserById([FromBody] Guid userId)
         {
-            var result = _usersService.GetUserById(userId);
+            var result = await _usersService.GetUserById(userId);
             if(result != null)  
                 return Ok(result);
             return BadRequest();

@@ -2679,11 +2679,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\FilipeMorais\\Desktop\\API_Budgify\\BudgifyAPI\\BudgifyAPI.Wallet\\BudgifyAPI.Wallets.csproj",
+      "projectUniqueName": "C:\\Users\\FilipeMorais\\Documents\\MEI\\Relatórios\\BudgifyAPI_MVC\\API_Budgify\\BudgifyAPI\\BudgifyAPI.Wallet\\BudgifyAPI.Wallets.csproj",
       "projectName": "BudgifyAPI.Wallets",
-      "projectPath": "C:\\Users\\FilipeMorais\\Desktop\\API_Budgify\\BudgifyAPI\\BudgifyAPI.Wallet\\BudgifyAPI.Wallets.csproj",
+      "projectPath": "C:\\Users\\FilipeMorais\\Documents\\MEI\\Relatórios\\BudgifyAPI_MVC\\API_Budgify\\BudgifyAPI\\BudgifyAPI.Wallet\\BudgifyAPI.Wallets.csproj",
       "packagesPath": "C:\\Users\\FilipeMorais\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\FilipeMorais\\Desktop\\API_Budgify\\BudgifyAPI\\BudgifyAPI.Wallet\\obj\\",
+      "outputPath": "C:\\Users\\FilipeMorais\\Documents\\MEI\\Relatórios\\BudgifyAPI_MVC\\API_Budgify\\BudgifyAPI\\BudgifyAPI.Wallet\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2698,7 +2698,6 @@
         "net8.0"
       ],
       "sources": {
-        "C:\\PROGRAM FILES\\DOTNET\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {},
         "https://nuget.devexpress.com/T9PlFrFveKhhANAAe7QQzSVDtKS97EFZ4Sm4IxMlTKUbYPXQ4c/api": {}
       },
@@ -2716,8 +2715,9 @@
       "restoreAuditProperties": {
         "enableAudit": "true",
         "auditLevel": "low",
-        "auditMode": "direct"
-      }
+        "auditMode": "all"
+      },
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net8.0": {
@@ -2771,7 +2771,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\PROGRAM FILES\\DOTNET\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\PROGRAM FILES\\DOTNET\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,1 +1,284 @@
-[]
+[
+  {
+    "ContainingType": "BudifyAPI.Users.Controllers.UserController",
+    "Method": "AddManagerToUserGroup",
+    "RelativePath": "api/User/AddManagerToUserGroup",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "user",
+        "Type": "BudifyAPI.Users.Models.DB.User",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BudifyAPI.Users.Controllers.UserController",
+    "Method": "AddUser",
+    "RelativePath": "api/User/AddUser",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "user",
+        "Type": "BudifyAPI.Users.Models.DB.User",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BudifyAPI.Users.Controllers.UserController",
+    "Method": "AddUserGroup",
+    "RelativePath": "api/User/AddUserGroup",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userGroup",
+        "Type": "BudifyAPI.Users.Models.DB.UserGroup",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BudifyAPI.Users.Controllers.UserController",
+    "Method": "AddUserToUserGroup",
+    "RelativePath": "api/User/AddUserToUserGroup",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "user",
+        "Type": "BudifyAPI.Users.Models.DB.User",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BudifyAPI.Users.Controllers.UserController",
+    "Method": "DeleteManagerToUserGroup",
+    "RelativePath": "api/User/DeleteManagerToUserGroup",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "user",
+        "Type": "BudifyAPI.Users.Models.DB.User",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BudifyAPI.Users.Controllers.UserController",
+    "Method": "DeleteUser",
+    "RelativePath": "api/User/DeleteUser/id_user",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BudifyAPI.Users.Controllers.UserController",
+    "Method": "DeleteUserFromUserGroup",
+    "RelativePath": "api/User/DeleteUserFromUserGroup",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "user",
+        "Type": "BudifyAPI.Users.Models.DB.User",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BudifyAPI.Users.Controllers.UserController",
+    "Method": "DeleteUserGroup",
+    "RelativePath": "api/User/DeleteUserGroup",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userGroup",
+        "Type": "BudifyAPI.Users.Models.DB.UserGroup",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BudifyAPI.Users.Controllers.UserController",
+    "Method": "GetAllUserGroup",
+    "RelativePath": "api/User/GetAllUserGroup/id_user_group",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userGroupId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BudifyAPI.Users.Controllers.UserController",
+    "Method": "GetUserById",
+    "RelativePath": "api/User/GetUserById/id_user",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BudifyAPI.Users.Controllers.UserController",
+    "Method": "GetUsers",
+    "RelativePath": "api/User/GetUsers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BudifyAPI.Users.Controllers.UserController",
+    "Method": "UpdateUser",
+    "RelativePath": "api/User/UpdateUser/id_user",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "BudifyAPI.Users.Models.DB.User",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BudifyAPI.Users.Controllers.UserController",
+    "Method": "UpdateUserGroup",
+    "RelativePath": "api/User/UpdateUserGroup/id_user_group",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userGroup",
+        "Type": "BudifyAPI.Users.Models.DB.UserGroup",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BudifyAPI.Users.Controllers.WalletController",
+    "Method": "AddWallet",
+    "RelativePath": "api/Wallet/AdicionaWallet",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "wallets",
+        "Type": "BudifyAPI.Users.Models.WalletModel.DBWallet.Wallet",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BudifyAPI.Users.Controllers.WalletController",
+    "Method": "DeleteWallet",
+    "RelativePath": "api/Wallet/DeleteWallet/walletId",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "walletId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BudifyAPI.Users.Controllers.WalletController",
+    "Method": "GetWalletById",
+    "RelativePath": "api/Wallet/GetWalletById/walletId",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "walletId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BudifyAPI.Users.Controllers.WalletController",
+    "Method": "GetWallet",
+    "RelativePath": "api/Wallet/GetWallets",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "wallets",
+        "Type": "BudifyAPI.Users.Models.WalletModel.DBWallet.Wallet",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BudifyAPI.Users.Controllers.WalletController",
+    "Method": "UpdateWallet",
+    "RelativePath": "api/Wallet/UpdateWallet",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "wallet",
+        "Type": "BudifyAPI.Users.Models.WalletModel.DBWallet.Wallet",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

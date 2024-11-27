@@ -8,17 +8,17 @@ namespace BudifyAPI.Users.Services
         Task<bool> AddUserGroup(UserGroup userGroup);
         Task<bool> UpdateUserGroup(UserGroup userGroup);
         Task<bool> DeleteUserGroup(UserGroup userGroup);
-        Task<List<UserGroup>> GetAllUserGroup(Guid userGroupId);
-        Task<bool> AddUserToUserGroup(User user, UserGroup userGroup);
-        Task<bool> DeleteUserFromUserGroup(User user, UserGroup userGroup);
-        Task<bool> AddManagerToUserGroup(User user, UserGroup userGroup);
-        Task<bool> DeleteManagerToUserGroup(User user, UserGroup userGroup);
+        Task<bool> GetAllUserGroup(Guid userGroupId);
+        Task<bool> AddUserToUserGroup(User user);
+        Task<bool> DeleteUserFromUserGroup(User user);
+        Task<bool> AddManagerToUserGroup(User user);
+        Task<bool> DeleteManagerToUserGroup(User user);
 
         //Users
         Task<bool> AddUser(User user);
-        Task<bool> UpdateUser(User userId);
+        Task<bool> UpdateUser(User user);
         Task<bool> DeleteUser(Guid userId);
-        Task<List<User>> GetUsers(User user);
+        Task<List<User>> GetUsers();
         Task<User> GetUserById(Guid userId);
 
 
