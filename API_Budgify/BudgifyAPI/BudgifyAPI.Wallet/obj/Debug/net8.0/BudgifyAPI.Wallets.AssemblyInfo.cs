@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BudgifyAPI.Wallets")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a138a4ee6ad66d2595b9b2e963b090af505f76bb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ca3b133b5f54b2e52489649bd737ced4868f3280")]
 [assembly: System.Reflection.AssemblyProductAttribute("BudgifyAPI.Wallets")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BudgifyAPI.Wallets")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
