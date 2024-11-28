@@ -1,7 +1,10 @@
-﻿using BudifyAPI.Users.Models.DB;
+﻿using BudifyAPI.Users.Models.USers.DBUsers;
+using BudifyAPI.Users.Models.USers.DBUsers.CreateUSerHelper;
+using BudifyAPI.Users.Models.USers.Helpers;
 using BudifyAPI.Users.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Runtime.InteropServices;
 
 namespace BudifyAPI.Users.Controllers
 {
@@ -17,19 +20,19 @@ namespace BudifyAPI.Users.Controllers
         }
 
         [HttpPost("AddUserGroup")]
-        public async Task<IActionResult> AddUserGroup([FromBody] UserGroup userGroup)
+        public async Task<IActionResult> AddUserGroup([FromBody] CreateUserGroup name)
         {
-            var result = await _usersService.AddUserGroup(userGroup);
-            if(result != null)
+            var result = await _usersService.AddUserGroup(name);
+            if (result != null)
                 return Ok(result);
             return BadRequest();
         }
 
-        [HttpPut("UpdateUserGroup/{id_user_group}")]
-        public async Task<IActionResult> UpdateUserGroup([FromBody] UserGroup userGroup)
+        [HttpPut("UpdateUserGroup")]
+        public async Task<IActionResult> UpdateUserGroup(Guid userGroupId, CreateUserGroup name)
         {
-            var result = await _usersService.UpdateUserGroup(userGroup);
-            if(result != null)
+            var result = await _usersService.UpdateUserGroup(userGroupId, name);
+            if (result != null)
                 return Ok(result);
             return BadRequest();
         }
@@ -48,7 +51,7 @@ namespace BudifyAPI.Users.Controllers
         public async Task<IActionResult> GetAllUserGroup(Guid userGroupId)
         {
             var result = await _usersService.GetUserGroup(userGroupId);
-            if(result != null)
+            if (result != null)
                 return Ok(result);
             return BadRequest();
         }
@@ -57,7 +60,7 @@ namespace BudifyAPI.Users.Controllers
         public async Task<IActionResult> AddUserToUserGroup([FromBody] User user)
         {
             var result = await _usersService.AddUserToUserGroup(user);
-            if(result != null)
+            if (result != null)
                 return Ok(result);
             return BadRequest();
         }
@@ -65,8 +68,8 @@ namespace BudifyAPI.Users.Controllers
         [HttpDelete("DeleteUserFromUserGroup/{userId}/{userGroupId}")]
         public async Task<IActionResult> DeleteUserFromUserGroup(Guid userID, Guid userGroupId)
         {
-            var result = await _usersService.DeleteUserFromUserGroup(userID, userGroupId);  
-            if(result != null)
+            var result = await _usersService.DeleteUserFromUserGroup(userID, userGroupId);
+            if (result != null)
                 return Ok(result);
             return BadRequest();
         }
@@ -75,7 +78,7 @@ namespace BudifyAPI.Users.Controllers
         public async Task<IActionResult> AddManagerToUserGroup([FromBody] User user)
         {
             var result = await _usersService.AddManagerToUserGroup(user);
-            if(result != null)
+            if (result != null)
                 return Ok(result);
             return BadRequest();
         }
@@ -84,34 +87,34 @@ namespace BudifyAPI.Users.Controllers
         public async Task<IActionResult> DeleteManagerToUserGroup([FromBody] User user)
         {
             var result = await _usersService.DeleteManagerToUserGroup(user);
-            if(result != null) 
+            if (result != null)
                 return Ok(result);
             return BadRequest();
         }
 
         [HttpPost("AddUser")]
-        public async Task<IActionResult> AddUser([FromBody] User user)
+        public async Task<IActionResult> AddUser([FromBody] CreateUser createUser)
         {
-            var result = await _usersService.AddUser(user);
-            if(result != null) 
+            var result = await _usersService.AddUser(createUser);
+            if (result != null)
                 return Ok(result);
             return BadRequest();
         }
 
         [HttpPut("UpdateUser/id_user")]
-        public async Task<IActionResult> UpdateUser([FromBody] User userId)
+        public async Task<IActionResult> UpdateUser(Guid userId, CreateUser createUser )
         {
-            var result = await _usersService.UpdateUser(userId);
-            if(result != null)  
+            var result = await _usersService.UpdateUser(userId, createUser);
+            if (result != null)
                 return Ok(result);
             return BadRequest();
         }
 
         [HttpDelete("DeleteUser/id_user")]
-        public async Task<IActionResult> DeleteUser([FromBody] Guid userId)
+        public async Task<IActionResult> DeleteUser(Guid userId)
         {
             var result = await _usersService.DeleteUser(userId);
-            if(result != null)
+            if (result != null)
                 return Ok(result);
             return BadRequest();
         }
@@ -120,16 +123,16 @@ namespace BudifyAPI.Users.Controllers
         public async Task<IActionResult> GetUsers()
         {
             var result = await _usersService.GetUsers();
-            if(result != null)
+            if (result != null)
                 return Ok(result);
             return BadRequest();
         }
 
         [HttpGet("GetUserById/id_user")]
-        public async Task<IActionResult> GetUserById([FromBody] Guid userId)
+        public async Task<IActionResult> GetUserById(Guid userId)
         {
             var result = await _usersService.GetUserById(userId);
-            if(result != null)  
+            if (result != null)
                 return Ok(result);
             return BadRequest();
         }

@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 
-namespace BudifyAPI.Users.Models.DB;
+namespace BudifyAPI.Users.Models.USers.DBUsers;
 
 public partial class User
 {
@@ -27,4 +26,6 @@ public partial class User
     public bool IsManager { get; set; }
 
     public bool AllowWalletWatch { get; set; }
+
+    public virtual UserGroup? IdUserGroupNavigation { get; set; }
 }

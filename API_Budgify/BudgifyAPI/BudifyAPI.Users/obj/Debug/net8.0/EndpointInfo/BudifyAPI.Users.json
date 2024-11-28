@@ -14,17 +14,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/UserGroup"
+                "$ref": "#/components/schemas/CreateUserGroup"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/UserGroup"
+                "$ref": "#/components/schemas/CreateUserGroup"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/UserGroup"
+                "$ref": "#/components/schemas/CreateUserGroup"
               }
             }
           }
@@ -36,18 +36,18 @@
         }
       }
     },
-    "/api/User/UpdateUserGroup/{id_user_group}": {
+    "/api/User/UpdateUserGroup": {
       "put": {
         "tags": [
           "User"
         ],
         "parameters": [
           {
-            "name": "id_user_group",
-            "in": "path",
-            "required": true,
+            "name": "userGroupId",
+            "in": "query",
             "schema": {
-              "type": "string"
+              "type": "string",
+              "format": "uuid"
             }
           }
         ],
@@ -55,17 +55,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/UserGroup"
+                "$ref": "#/components/schemas/CreateUserGroup"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/UserGroup"
+                "$ref": "#/components/schemas/CreateUserGroup"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/UserGroup"
+                "$ref": "#/components/schemas/CreateUserGroup"
               }
             }
           }
@@ -256,17 +256,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/User"
+                "$ref": "#/components/schemas/CreateUser"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/User"
+                "$ref": "#/components/schemas/CreateUser"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/User"
+                "$ref": "#/components/schemas/CreateUser"
               }
             }
           }
@@ -283,21 +283,31 @@
         "tags": [
           "User"
         ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/User"
+                "$ref": "#/components/schemas/CreateUser"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/User"
+                "$ref": "#/components/schemas/CreateUser"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/User"
+                "$ref": "#/components/schemas/CreateUser"
               }
             }
           }
@@ -529,6 +539,59 @@
   },
   "components": {
     "schemas": {
+      "CreateUser": {
+        "type": "object",
+        "properties": {
+          "idUserGroup": {
+            "type": "string",
+            "format": "uuid",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          },
+          "dateOfBirth": {
+            "type": "string",
+            "format": "date"
+          },
+          "genre": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "isActive": {
+            "type": "boolean"
+          },
+          "isAdmin": {
+            "type": "boolean"
+          },
+          "isManager": {
+            "type": "boolean"
+          },
+          "allowWalletWatch": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateUserGroup": {
+        "type": "object",
+        "properties": {
+          "userGroupName": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "User": {
         "type": "object",
         "properties": {
@@ -572,6 +635,9 @@
           },
           "allowWalletWatch": {
             "type": "boolean"
+          },
+          "idUserGroupNavigation": {
+            "$ref": "#/components/schemas/UserGroup"
           }
         },
         "additionalProperties": false
@@ -585,6 +651,13 @@
           },
           "name": {
             "type": "string",
+            "nullable": true
+          },
+          "users": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/User"
+            },
             "nullable": true
           }
         },

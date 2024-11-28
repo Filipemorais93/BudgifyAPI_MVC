@@ -1,8 +1,9 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
-namespace BudifyAPI.Users.Models.DB;
+namespace BudifyAPI.Users.Models.USers.DBUsers;
 
 public partial class UsersContext : DbContext
 {
@@ -21,7 +22,7 @@ public partial class UsersContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseNpgsql("Host=localhost;Port=5432;UserId=postgres;Password=sasa;Database=Users");
+        => optionsBuilder.UseNpgsql("Server=localhost;Port=5432;UserId=postgres;Password=sasa;Database=Users");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -30,7 +31,9 @@ public partial class UsersContext : DbContext
         modelBuilder.Entity<User>(entity =>
         {
             entity.HasKey(e => e.IdUser).HasName("user_pkey");
-                entity.ToTable("user");
+
+            entity.ToTable("user");
+
             entity.Property(e => e.IdUser)
                 .HasDefaultValueSql("uuid_generate_v4()")
                 .HasColumnName("id_user");
@@ -42,9 +45,6 @@ public partial class UsersContext : DbContext
                 .HasMaxLength(255)
                 .HasColumnName("email");
             entity.Property(e => e.Genre).HasColumnName("genre");
-            entity.Property(e => e.IdUser)
-                .HasDefaultValueSql("uuid_generate_v4()")
-                .HasColumnName("id_user");
             entity.Property(e => e.IdUserGroup).HasColumnName("id_user_group");
             entity.Property(e => e.IsActive)
                 .HasDefaultValue(true)
@@ -61,12 +61,17 @@ public partial class UsersContext : DbContext
             entity.Property(e => e.Password)
                 .HasMaxLength(255)
                 .HasColumnName("password");
+
+            entity.HasOne(d => d.IdUserGroupNavigation).WithMany(p => p.Users)
+                .HasForeignKey(d => d.IdUserGroup)
+                .HasConstraintName("FK");
         });
 
         modelBuilder.Entity<UserGroup>(entity =>
         {
             entity.HasKey(e => e.IdUserGroup).HasName("user_group_pkey");
-              entity.ToTable("user_group");
+
+            entity.ToTable("user_group");
 
             entity.Property(e => e.IdUserGroup)
                 .HasDefaultValueSql("uuid_generate_v4()")

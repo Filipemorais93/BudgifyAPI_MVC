@@ -1,5 +1,6 @@
-using BudifyAPI.Users.Models.DB;
+
 using BudifyAPI.Users.Models.TransactionsModel.DBTransactions;
+using BudifyAPI.Users.Models.USers.DBUsers;
 using BudifyAPI.Users.Models.WalletModel.DBWallet;
 using BudifyAPI.Users.Services;
 using BudifyAPI.Users.Services.Wallets;
@@ -22,7 +23,6 @@ builder.Services.AddDbContext<UsersContext>(
     {
         var connectionString = options.UseNpgsql(builder.Configuration.GetConnectionString("BD"));
     });
-
 builder.Services.AddDbContext<WalletContext>(
     options =>
     {

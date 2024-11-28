@@ -1,12 +1,15 @@
-﻿using BudifyAPI.Users.Models.DB;
+﻿using BudifyAPI.Users.Models.USers.DBUsers;
 using Microsoft.EntityFrameworkCore;
 using BudifyAPI.Users.Models;
 using Npgsql;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
+using BudifyAPI.Users.Models.USers.Helpers;
+using Microsoft.AspNetCore.Identity;
+using BudifyAPI.Users.Models.USers.DBUsers.CreateUSerHelper;
 
 namespace BudifyAPI.Users.Services
 {
-    public class UsersService : IUsersService
+    public class UsersService:IUsersService
     {
         private readonly UsersContext _contextUsers;
         public UsersService(UsersContext contextUsers)
@@ -19,15 +22,15 @@ namespace BudifyAPI.Users.Services
         /// </summary>
         /// <param name="userGroup"></param>
         /// <returns></returns>
-        public async Task<bool> AddUserGroup(UserGroup userGroup)
+        public async Task<bool> AddUserGroup(CreateUserGroup name)
         {
-            var userGroupExist = await _contextUsers.UserGroups.FirstOrDefaultAsync(x => x.IdUserGroup == userGroup.IdUserGroup);
-            if(userGroupExist != null)
-                return false;
-            await _contextUsers.UserGroups.AddAsync(userGroup);
+
+            //string query = "insert into user_group (name) " +
+            //    "values(@name)";
+            //var resp = _contextUsers.Database.ExecuteSqlRawAsync(query, new NpgsqlParameter("@name", name.userGroupName));
+            await _contextUsers.UserGroups.AddAsync(new UserGroup (){ Name = name.userGroupName });
             await _contextUsers.SaveChangesAsync();
             return true;
-
         }
 
         /// <summary>
@@ -35,20 +38,21 @@ namespace BudifyAPI.Users.Services
         /// </summary>
         /// <param name="userGroup"></param>
         /// <returns></returns>
-        public async Task<bool> UpdateUserGroup(UserGroup userGroup)
+        public async Task<bool> UpdateUserGroup(Guid userGroupId, CreateUserGroup name)
         {
-            //VER ESTA MERDA
-            var userGroupExist = await _contextUsers.UserGroups.FirstOrDefaultAsync(x => x.IdUserGroup == userGroup.IdUserGroup);
-            var idUserGrup = userGroupExist.IdUserGroup;
-             if (userGroupExist == null)
+            var userGroupExist = await _contextUsers.UserGroups.FirstOrDefaultAsync(x => x.IdUserGroup == userGroupId);            
+            if (userGroupExist == null)
                 return false;
 
-            var query = "update public.user_group " +
-                "set name = @name " +
-                "where id_user_group = @userGroupExist";
-            //var result = _contextUsers.Database.ExecuteSqlRawAsync(query, new NpgsqlParameter("@name", userGroup.Name), new NpgsqlParameter("@id_user_group", userGroup.IdUserGroup));
-            var result = _contextUsers.UserGroups.FromSqlRaw(query, new NpgsqlParameter("@name", userGroup.Name));
+            _contextUsers.UserGroups.Update(new UserGroup() { Name = name.userGroupName });
+            await _contextUsers.SaveChangesAsync();
             return true;
+
+
+            //string query = "uddate public.user_group " +
+            //    "set  name = @name " +
+            //    "where id_user_group = @id_user_group";
+            //var resp = _contextUsers.Database.ExecuteSqlRawAsync(query, new NpgsqlParameter("@name", name), new NpgsqlParameter("@id_user_group", userGroupId));
 
         }
 
@@ -79,7 +83,7 @@ namespace BudifyAPI.Users.Services
             if (UserExistGroup == null)
                 return null;
             string query = $"select * from public.user_group where id_user_group = @userGroupId";
-            var listaUserGroups = await _contextUsers.UserGroups.FromSqlRaw(query, new NpgsqlParameter("@userGroupId",userGroupId)).FirstOrDefaultAsync();
+            var listaUserGroups = await _contextUsers.UserGroups.FromSqlRaw(query, new NpgsqlParameter("@userGroupId", userGroupId)).FirstOrDefaultAsync();
             return listaUserGroups;
         }
 
@@ -171,12 +175,25 @@ namespace BudifyAPI.Users.Services
         /// </summary>
         /// <param name="user"></param>
         /// <returns></returns>
-        public async Task<bool> AddUser(User user)
+        public async Task<bool> AddUser(CreateUser createUser)
         {
-            var userExists = await _contextUsers.Users.FirstOrDefaultAsync(x => x.Email == user.Email);
+            var userExists = await _contextUsers.Users.FirstOrDefaultAsync(x => x.Email == createUser.Email);
             if (userExists != null)
                 return false;
-            await _contextUsers.Users.AddAsync(user);
+            await _contextUsers.Users.AddAsync(new User{
+
+                IdUserGroup = createUser.IdUserGroup,
+                Name = createUser.Name,
+                Email = createUser.Email,
+                Password = createUser.Password,
+                DateOfBirth = createUser.DateOfBirth,
+                Genre = createUser.Genre,
+                IsActive = createUser.IsActive,
+                IsAdmin = createUser.IsAdmin,
+                IsManager = createUser.IsManager,
+                AllowWalletWatch = createUser.AllowWalletWatch
+
+            });
             await _contextUsers.SaveChangesAsync();
             return true;
         }
@@ -186,16 +203,28 @@ namespace BudifyAPI.Users.Services
         /// </summary>
         /// <param name="userId"></param>
         /// <returns></returns>
-        public async Task<bool> UpdateUser(User user)
+        public async Task<bool> UpdateUser(Guid userId, CreateUser createUser)
         {
-            var userExist = await _contextUsers.Users.FirstOrDefaultAsync(x => x.IdUser == user.IdUser);
+            var userExist = await _contextUsers.Users.FirstOrDefaultAsync(x => x.IdUser == userId);
             if (userExist == null)
                 return false;
-            
-            _contextUsers.Users.Update(user);
+
+            _contextUsers.Users.Update(new User()
+            {
+                IdUserGroup = createUser.IdUserGroup,
+                Name = createUser.Name,
+                Email = createUser.Email,
+                Password = createUser.Password,
+                DateOfBirth = createUser.DateOfBirth,
+                Genre = createUser.Genre,
+                IsActive = createUser.IsActive,
+                IsAdmin = createUser.IsAdmin,
+                IsManager = createUser.IsManager,
+                AllowWalletWatch = createUser.AllowWalletWatch
+            });
             await _contextUsers.SaveChangesAsync();
             return true;
-            
+
 
         }
 
