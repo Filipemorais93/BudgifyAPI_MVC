@@ -37,15 +37,17 @@ namespace BudifyAPI.Users.Services
         /// <returns></returns>
         public async Task<bool> UpdateUserGroup(UserGroup userGroup)
         {
-            //VER ESTA BOSTA
+            //VER ESTA MERDA
             var userGroupExist = await _contextUsers.UserGroups.FirstOrDefaultAsync(x => x.IdUserGroup == userGroup.IdUserGroup);
+            var idUserGrup = userGroupExist.IdUserGroup;
              if (userGroupExist == null)
                 return false;
+
             var query = "update public.user_group " +
                 "set name = @name " +
-                "where id_user_group = @id_user_group";
+                "where id_user_group = @userGroupExist";
             //var result = _contextUsers.Database.ExecuteSqlRawAsync(query, new NpgsqlParameter("@name", userGroup.Name), new NpgsqlParameter("@id_user_group", userGroup.IdUserGroup));
-            var result = _contextUsers.UserGroups.FromSqlRaw(query, new NpgsqlParameter("@name", userGroup.Name), new NpgsqlParameter("@id_user_group", userGroup.IdUserGroup));
+            var result = _contextUsers.UserGroups.FromSqlRaw(query, new NpgsqlParameter("@name", userGroup.Name));
             return true;
 
         }
@@ -55,13 +57,13 @@ namespace BudifyAPI.Users.Services
         /// </summary>
         /// <param name="userGroup"></param>
         /// <returns></returns>
-        public async Task<bool> DeleteUserGroup(UserGroup userGroup)
+        public async Task<bool> DeleteUserGroup(Guid userGroupId)
         {
             //VER ISTO
-            var userGroupExist = await _contextUsers.UserGroups.FirstOrDefaultAsync(x => x.IdUserGroup == userGroup.IdUserGroup);
+            var userGroupExist = await _contextUsers.UserGroups.FirstOrDefaultAsync(x => x.IdUserGroup == userGroupId);
             if (userGroupExist == null)
                 return false;
-            _contextUsers.UserGroups.Remove(userGroup);
+            _contextUsers.UserGroups.Remove(userGroupExist);
             await _contextUsers.SaveChangesAsync();
             return true;
         }
@@ -71,14 +73,14 @@ namespace BudifyAPI.Users.Services
         /// </summary>
         /// <param name="userGroupId"></param>
         /// <returns></returns>
-        public async Task<bool> GetAllUserGroup(Guid userGroupId)
+        public async Task<UserGroup> GetUserGroup(Guid userGroupId)
         {
             var UserExistGroup = await _contextUsers.UserGroups.FirstOrDefaultAsync(x => x.IdUserGroup == userGroupId);
             if (UserExistGroup == null)
-                return false;
-            string query = $"select * from public.user_group where id_user_group =@userGroupId";
-            var listaUserGroups = await _contextUsers.Database.ExecuteSqlRawAsync(query, new NpgsqlParameter("@userGroupId",userGroupId));
-            return true;
+                return null;
+            string query = $"select * from public.user_group where id_user_group = @userGroupId";
+            var listaUserGroups = await _contextUsers.UserGroups.FromSqlRaw(query, new NpgsqlParameter("@userGroupId",userGroupId)).FirstOrDefaultAsync();
+            return listaUserGroups;
         }
 
         /// <summary>
@@ -105,16 +107,19 @@ namespace BudifyAPI.Users.Services
         /// <param name="user"></param>
         /// <param name="userGroup"></param>
         /// <returns></returns>
-        public async Task<bool> DeleteUserFromUserGroup(User user)
+        public async Task<bool> DeleteUserFromUserGroup(Guid userId, Guid userGroupId)
         {
             //Ver isto
-            var userExistGroup = _contextUsers.Users.FirstOrDefaultAsync(x => x.IdUserGroup.Equals(user.IdUserGroup));
-            if (userExistGroup != null)
+            var userExist = await _contextUsers.Users.FirstOrDefaultAsync(x => x.IdUser == userId);
+            if (userExist != null)
+                return false;
+            var userExistInGroup = await _contextUsers.Users.FirstOrDefaultAsync(x => x.IdUserGroup == userGroupId);
+            if (userExistInGroup != null)
                 return false;
             string query = "update public.user " +
-                $"set id_user_group = @id_user_group " +
+                $"set id_user_group = null " +
                 $"where id_user = '@id_user'";
-            var result = _contextUsers.Database.ExecuteSqlRawAsync(query, new NpgsqlParameter("@id_user_group", user.IdUserGroup), new NpgsqlParameter("@id_user", user.IdUser));
+            var result = _contextUsers.Users.FromSqlRaw(query, new NpgsqlParameter("@id_user", userId));
             return true;
         }
 
@@ -150,7 +155,7 @@ namespace BudifyAPI.Users.Services
             if (user.IsManager)
             {
                 string query = "update public.user " +
-                $"set id_user_group = @id_user_group " +
+                $"set id_user_group = null " +
                 $"where id_user = '@id_user'";
                 var result = _contextUsers.Database.ExecuteSqlRawAsync(query, new NpgsqlParameter("@id_user_group", user.IdUserGroup), new NpgsqlParameter("@id_user", user.IdUser));
                 return true;
@@ -234,7 +239,7 @@ namespace BudifyAPI.Users.Services
             if (userIdExist == null)
                 return null;
             string query = "select * from public.user where id_user = @id_user";
-            var user = _contextUsers.Users.FromSqlRaw(query, new NpgsqlParameter("@id_user",userId)).ToListAsync();
+            var user = await _contextUsers.Users.FromSqlRaw(query, new NpgsqlParameter("@id_user", userId)).FirstOrDefaultAsync();
             return user;
 
         }

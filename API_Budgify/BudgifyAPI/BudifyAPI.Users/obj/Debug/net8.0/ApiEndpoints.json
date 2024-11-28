@@ -98,14 +98,19 @@
   {
     "ContainingType": "BudifyAPI.Users.Controllers.UserController",
     "Method": "DeleteUserFromUserGroup",
-    "RelativePath": "api/User/DeleteUserFromUserGroup",
+    "RelativePath": "api/User/DeleteUserFromUserGroup/{userId}/{userGroupId}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "user",
-        "Type": "BudifyAPI.Users.Models.DB.User",
+        "Name": "userID",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "userGroupId",
+        "Type": "System.Guid",
         "IsRequired": true
       }
     ],
@@ -114,24 +119,8 @@
   {
     "ContainingType": "BudifyAPI.Users.Controllers.UserController",
     "Method": "DeleteUserGroup",
-    "RelativePath": "api/User/DeleteUserGroup",
+    "RelativePath": "api/User/DeleteUserGroup/{userGroupId}",
     "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "userGroup",
-        "Type": "BudifyAPI.Users.Models.DB.UserGroup",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "BudifyAPI.Users.Controllers.UserController",
-    "Method": "GetAllUserGroup",
-    "RelativePath": "api/User/GetAllUserGroup/id_user_group",
-    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -155,6 +144,22 @@
         "Name": "userId",
         "Type": "System.Guid",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BudifyAPI.Users.Controllers.UserController",
+    "Method": "GetAllUserGroup",
+    "RelativePath": "api/User/GetUserGroup",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userGroupId",
+        "Type": "System.Guid",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -188,7 +193,7 @@
   {
     "ContainingType": "BudifyAPI.Users.Controllers.UserController",
     "Method": "UpdateUserGroup",
-    "RelativePath": "api/User/UpdateUserGroup/id_user_group",
+    "RelativePath": "api/User/UpdateUserGroup/{id_user_group}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -196,6 +201,11 @@
       {
         "Name": "userGroup",
         "Type": "BudifyAPI.Users.Models.DB.UserGroup",
+        "IsRequired": true
+      },
+      {
+        "Name": "id_user_group",
+        "Type": "",
         "IsRequired": true
       }
     ],

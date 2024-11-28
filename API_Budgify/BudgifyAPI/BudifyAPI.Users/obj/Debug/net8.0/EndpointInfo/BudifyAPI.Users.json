@@ -36,11 +36,21 @@
         }
       }
     },
-    "/api/User/UpdateUserGroup/id_user_group": {
+    "/api/User/UpdateUserGroup/{id_user_group}": {
       "put": {
         "tags": [
           "User"
         ],
+        "parameters": [
+          {
+            "name": "id_user_group",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -67,30 +77,22 @@
         }
       }
     },
-    "/api/User/DeleteUserGroup": {
+    "/api/User/DeleteUserGroup/{userGroupId}": {
       "delete": {
         "tags": [
           "User"
         ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/UserGroup"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/UserGroup"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/UserGroup"
-              }
+        "parameters": [
+          {
+            "name": "userGroupId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
             }
           }
-        },
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -98,33 +100,21 @@
         }
       }
     },
-    "/api/User/GetAllUserGroup/id_user_group": {
+    "/api/User/GetUserGroup": {
       "get": {
         "tags": [
           "User"
         ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "string",
-                "format": "uuid"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "type": "string",
-                "format": "uuid"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "type": "string",
-                "format": "uuid"
-              }
+        "parameters": [
+          {
+            "name": "userGroupId",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
             }
           }
-        },
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -163,30 +153,31 @@
         }
       }
     },
-    "/api/User/DeleteUserFromUserGroup": {
+    "/api/User/DeleteUserFromUserGroup/{userId}/{userGroupId}": {
       "delete": {
         "tags": [
           "User"
         ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/User"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/User"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/User"
-              }
+        "parameters": [
+          {
+            "name": "userID",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "userGroupId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
             }
           }
-        },
+        ],
         "responses": {
           "200": {
             "description": "OK"

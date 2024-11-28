@@ -31,7 +31,9 @@ public partial class UsersContext : DbContext
         {
             entity.HasKey(e => e.IdUser).HasName("user_pkey");
                 entity.ToTable("user");
-
+            entity.Property(e => e.IdUser)
+                .HasDefaultValueSql("uuid_generate_v4()")
+                .HasColumnName("id_user");
             entity.Property(e => e.AllowWalletWatch)
                 .HasDefaultValue(true)
                 .HasColumnName("allow_wallet_watch");

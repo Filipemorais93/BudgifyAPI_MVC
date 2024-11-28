@@ -34,20 +34,20 @@ namespace BudifyAPI.Users.Controllers
             return BadRequest();
         }
 
-        [HttpDelete("DeleteUserGroup")]
-        public async Task<IActionResult> DeleteUserGroup([FromBody] UserGroup userGroup)
+        [HttpDelete("DeleteUserGroup/{userGroupId}")]
+        public async Task<IActionResult> DeleteUserGroup([FromRoute] Guid userGroupId)
         {
-            var result = await _usersService.DeleteUserGroup(userGroup);
+            var result = await _usersService.DeleteUserGroup(userGroupId);
             if (result != null)
                 return Ok(result);
             return BadRequest();
 
         }
 
-        [HttpGet("GetAllUserGroup/id_user_group")]
-        public async Task<IActionResult> GetAllUserGroup([FromBody] Guid userGroupId)
+        [HttpGet("GetUserGroup")]
+        public async Task<IActionResult> GetAllUserGroup(Guid userGroupId)
         {
-            var result = await _usersService.GetAllUserGroup(userGroupId);
+            var result = await _usersService.GetUserGroup(userGroupId);
             if(result != null)
                 return Ok(result);
             return BadRequest();
@@ -62,10 +62,10 @@ namespace BudifyAPI.Users.Controllers
             return BadRequest();
         }
 
-        [HttpDelete("DeleteUserFromUserGroup")]
-        public async Task<IActionResult> DeleteUserFromUserGroup([FromBody]User user)
+        [HttpDelete("DeleteUserFromUserGroup/{userId}/{userGroupId}")]
+        public async Task<IActionResult> DeleteUserFromUserGroup(Guid userID, Guid userGroupId)
         {
-            var result = await _usersService.DeleteUserFromUserGroup(user);  
+            var result = await _usersService.DeleteUserFromUserGroup(userID, userGroupId);  
             if(result != null)
                 return Ok(result);
             return BadRequest();

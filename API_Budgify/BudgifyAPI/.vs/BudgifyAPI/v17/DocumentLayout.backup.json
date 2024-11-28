@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{0A021542-D39A-47E2-A30D-817F0C12916B}|BudifyAPI.Users\\BudifyAPI.Users.csproj|solutionrelative:budifyapi.users\\services\\usersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0A021542-D39A-47E2-A30D-817F0C12916B}|BudifyAPI.Users\\BudifyAPI.Users.csproj|c:\\users\\filipemorais\\documents\\mei\\relat\u00F3rios\\budgifyapi_mvc\\api_budgify\\budgifyapi\\budifyapi.users\\services\\iusersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0A021542-D39A-47E2-A30D-817F0C12916B}|BudifyAPI.Users\\BudifyAPI.Users.csproj|solutionrelative:budifyapi.users\\services\\iusersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0A021542-D39A-47E2-A30D-817F0C12916B}|BudifyAPI.Users\\BudifyAPI.Users.csproj|c:\\users\\filipemorais\\documents\\mei\\relat\u00F3rios\\budgifyapi_mvc\\api_budgify\\budgifyapi\\budifyapi.users\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0A021542-D39A-47E2-A30D-817F0C12916B}|BudifyAPI.Users\\BudifyAPI.Users.csproj|solutionrelative:budifyapi.users\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A021542-D39A-47E2-A30D-817F0C12916B}|BudifyAPI.Users\\BudifyAPI.Users.csproj|c:\\users\\filipemorais\\documents\\mei\\relat\u00F3rios\\budgifyapi_mvc\\api_budgify\\budgifyapi\\budifyapi.users\\services\\iusersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A021542-D39A-47E2-A30D-817F0C12916B}|BudifyAPI.Users\\BudifyAPI.Users.csproj|solutionrelative:budifyapi.users\\services\\iusersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -32,33 +32,33 @@
               "RelativeDocumentMoniker": "BudifyAPI.Users\\Services\\UsersService.cs",
               "ToolTip": "C:\\Users\\FilipeMorais\\Documents\\MEI\\Relat\u00F3rios\\BudgifyAPI_MVC\\API_Budgify\\BudgifyAPI\\BudifyAPI.Users\\Services\\UsersService.cs",
               "RelativeToolTip": "BudifyAPI.Users\\Services\\UsersService.cs",
-              "ViewState": "AgIAANQAAAAAAAAAAADwv+4AAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAgwIEAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-25T12:19:48.319Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "UserController.cs",
               "DocumentMoniker": "C:\\Users\\FilipeMorais\\Documents\\MEI\\Relat\u00F3rios\\BudgifyAPI_MVC\\API_Budgify\\BudgifyAPI\\BudifyAPI.Users\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "BudifyAPI.Users\\Controllers\\UserController.cs",
               "ToolTip": "C:\\Users\\FilipeMorais\\Documents\\MEI\\Relat\u00F3rios\\BudgifyAPI_MVC\\API_Budgify\\BudgifyAPI\\BudifyAPI.Users\\Controllers\\UserController.cs",
               "RelativeToolTip": "BudifyAPI.Users\\Controllers\\UserController.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAgwBwAAABEAAAAAAAAAA==",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAYwEAAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-27T10:22:12.894Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "IUsersService.cs",
               "DocumentMoniker": "C:\\Users\\FilipeMorais\\Documents\\MEI\\Relat\u00F3rios\\BudgifyAPI_MVC\\API_Budgify\\BudgifyAPI\\BudifyAPI.Users\\Services\\IUsersService.cs",
               "RelativeDocumentMoniker": "BudifyAPI.Users\\Services\\IUsersService.cs",
               "ToolTip": "C:\\Users\\FilipeMorais\\Documents\\MEI\\Relat\u00F3rios\\BudgifyAPI_MVC\\API_Budgify\\BudgifyAPI\\BudifyAPI.Users\\Services\\IUsersService.cs",
               "RelativeToolTip": "BudifyAPI.Users\\Services\\IUsersService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-27T12:13:06.438Z",
               "EditorCaption": ""
