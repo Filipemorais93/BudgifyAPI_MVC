@@ -25,7 +25,7 @@ namespace BudifyAPI.Users.Controllers
             return BadRequest();
         }
 
-        [HttpPut("UpdateUserGroup/id_user_group")]
+        [HttpPut("UpdateUserGroup/{id_user_group}")]
         public async Task<IActionResult> UpdateUserGroup([FromBody] UserGroup userGroup)
         {
             var result = await _usersService.UpdateUserGroup(userGroup);

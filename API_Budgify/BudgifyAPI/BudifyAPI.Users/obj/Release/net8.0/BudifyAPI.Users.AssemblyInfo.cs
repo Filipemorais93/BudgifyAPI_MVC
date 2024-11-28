@@ -13,7 +13,7 @@ using System.Reflection;
 
 [assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("a6ec33f3-ed49-4770-ad6c-4bbe5e11d322")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("BudifyAPI.Users")]
-[assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
+[assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9a9a57db2c175e7af07697e7c2d3aec6d4782f1a")]
 [assembly: System.Reflection.AssemblyProductAttribute("BudifyAPI.Users")]

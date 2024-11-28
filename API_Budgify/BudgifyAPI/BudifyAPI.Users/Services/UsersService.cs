@@ -44,7 +44,8 @@ namespace BudifyAPI.Users.Services
             var query = "update public.user_group " +
                 "set name = @name " +
                 "where id_user_group = @id_user_group";
-            var result = _contextUsers.Database.ExecuteSqlRawAsync(query, new NpgsqlParameter("@name", userGroup.Name), new NpgsqlParameter("@id_user_group", userGroup.IdUserGroup));
+            //var result = _contextUsers.Database.ExecuteSqlRawAsync(query, new NpgsqlParameter("@name", userGroup.Name), new NpgsqlParameter("@id_user_group", userGroup.IdUserGroup));
+            var result = _contextUsers.UserGroups.FromSqlRaw(query, new NpgsqlParameter("@name", userGroup.Name), new NpgsqlParameter("@id_user_group", userGroup.IdUserGroup));
             return true;
 
         }
