@@ -50,14 +50,19 @@
   {
     "ContainingType": "BudifyAPI.Users.Controllers.UserController",
     "Method": "AddUserToUserGroup",
-    "RelativePath": "api/User/AddUserToUserGroup",
+    "RelativePath": "api/User/AddUserToUserGroup/{userId}",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "user",
-        "Type": "BudifyAPI.Users.Models.USers.DBUsers.User",
+        "Name": "createUser",
+        "Type": "BudifyAPI.Users.Models.USers.DBUsers.CreateUSerHelper.CreateUser",
+        "IsRequired": true
+      },
+      {
+        "Name": "userId",
+        "Type": "System.Guid",
         "IsRequired": true
       }
     ],
@@ -82,7 +87,7 @@
   {
     "ContainingType": "BudifyAPI.Users.Controllers.UserController",
     "Method": "DeleteUser",
-    "RelativePath": "api/User/DeleteUser/id_user",
+    "RelativePath": "api/User/DeleteUser/{userId}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -98,18 +103,13 @@
   {
     "ContainingType": "BudifyAPI.Users.Controllers.UserController",
     "Method": "DeleteUserFromUserGroup",
-    "RelativePath": "api/User/DeleteUserFromUserGroup/{userId}/{userGroupId}",
+    "RelativePath": "api/User/DeleteUserFromUserGroup/{userId}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "userID",
-        "Type": "System.Guid",
-        "IsRequired": true
-      },
-      {
-        "Name": "userGroupId",
+        "Name": "userId",
         "Type": "System.Guid",
         "IsRequired": true
       }
@@ -135,7 +135,7 @@
   {
     "ContainingType": "BudifyAPI.Users.Controllers.UserController",
     "Method": "GetUserById",
-    "RelativePath": "api/User/GetUserById/id_user",
+    "RelativePath": "api/User/GetUserById/{userId}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -151,7 +151,7 @@
   {
     "ContainingType": "BudifyAPI.Users.Controllers.UserController",
     "Method": "GetAllUserGroup",
-    "RelativePath": "api/User/GetUserGroup",
+    "RelativePath": "api/User/GetUserGroup/{userGroupId}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -159,7 +159,7 @@
       {
         "Name": "userGroupId",
         "Type": "System.Guid",
-        "IsRequired": false
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
@@ -177,7 +177,7 @@
   {
     "ContainingType": "BudifyAPI.Users.Controllers.UserController",
     "Method": "UpdateUser",
-    "RelativePath": "api/User/UpdateUser/id_user",
+    "RelativePath": "api/User/UpdateUser/{userId}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -185,7 +185,7 @@
       {
         "Name": "userId",
         "Type": "System.Guid",
-        "IsRequired": false
+        "IsRequired": true
       },
       {
         "Name": "createUser",
@@ -198,7 +198,7 @@
   {
     "ContainingType": "BudifyAPI.Users.Controllers.UserController",
     "Method": "UpdateUserGroup",
-    "RelativePath": "api/User/UpdateUserGroup",
+    "RelativePath": "api/User/UpdateUserGroup/{userGroupId}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -206,7 +206,7 @@
       {
         "Name": "userGroupId",
         "Type": "System.Guid",
-        "IsRequired": false
+        "IsRequired": true
       },
       {
         "Name": "name",

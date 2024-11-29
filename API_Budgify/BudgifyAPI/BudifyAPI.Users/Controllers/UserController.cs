@@ -28,7 +28,7 @@ namespace BudifyAPI.Users.Controllers
             return BadRequest();
         }
 
-        [HttpPut("UpdateUserGroup")]
+        [HttpPut("UpdateUserGroup/{userGroupId}")]
         public async Task<IActionResult> UpdateUserGroup(Guid userGroupId, CreateUserGroup name)
         {
             var result = await _usersService.UpdateUserGroup(userGroupId, name);
@@ -47,7 +47,7 @@ namespace BudifyAPI.Users.Controllers
 
         }
 
-        [HttpGet("GetUserGroup")]
+        [HttpGet("GetUserGroup/{userGroupId}")]
         public async Task<IActionResult> GetAllUserGroup(Guid userGroupId)
         {
             var result = await _usersService.GetUserGroup(userGroupId);
@@ -56,19 +56,19 @@ namespace BudifyAPI.Users.Controllers
             return BadRequest();
         }
 
-        [HttpPost("AddUserToUserGroup")]
-        public async Task<IActionResult> AddUserToUserGroup([FromBody] User user)
+        [HttpPost("AddUserToUserGroup/{userId}")]
+        public async Task<IActionResult> AddUserToUserGroup([FromBody] CreateUser createUser, Guid userId)
         {
-            var result = await _usersService.AddUserToUserGroup(user);
+            var result = await _usersService.AddUserToUserGroup(createUser, userId);
             if (result != null)
                 return Ok(result);
             return BadRequest();
         }
 
-        [HttpDelete("DeleteUserFromUserGroup/{userId}/{userGroupId}")]
-        public async Task<IActionResult> DeleteUserFromUserGroup(Guid userID, Guid userGroupId)
+        [HttpDelete("DeleteUserFromUserGroup/{userId}")]
+        public async Task<IActionResult> DeleteUserFromUserGroup(Guid userId)
         {
-            var result = await _usersService.DeleteUserFromUserGroup(userID, userGroupId);
+            var result = await _usersService.DeleteUserFromUserGroup(userId);
             if (result != null)
                 return Ok(result);
             return BadRequest();
@@ -101,7 +101,7 @@ namespace BudifyAPI.Users.Controllers
             return BadRequest();
         }
 
-        [HttpPut("UpdateUser/id_user")]
+        [HttpPut("UpdateUser/{userId}")]
         public async Task<IActionResult> UpdateUser(Guid userId, CreateUser createUser )
         {
             var result = await _usersService.UpdateUser(userId, createUser);
@@ -110,7 +110,7 @@ namespace BudifyAPI.Users.Controllers
             return BadRequest();
         }
 
-        [HttpDelete("DeleteUser/id_user")]
+        [HttpDelete("DeleteUser/{userId}")]
         public async Task<IActionResult> DeleteUser(Guid userId)
         {
             var result = await _usersService.DeleteUser(userId);
@@ -128,7 +128,7 @@ namespace BudifyAPI.Users.Controllers
             return BadRequest();
         }
 
-        [HttpGet("GetUserById/id_user")]
+        [HttpGet("GetUserById/{userId}")]
         public async Task<IActionResult> GetUserById(Guid userId)
         {
             var result = await _usersService.GetUserById(userId);

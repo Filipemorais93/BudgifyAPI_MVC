@@ -22,4 +22,8 @@
 
         public bool AllowWalletWatch { get; set; }
     }
+    public class IdGroupUserAdd
+    {
+        public Guid? IdUserGroup { get; set; }
+    }
 }
