@@ -4,9 +4,11 @@
     "\\API_Budgify",
     "\\API_Budgify\\BudgifyAPI",
     "\\API_Budgify\\BudgifyAPI\\BudifyAPI.Users",
-    "\\API_Budgify\\BudgifyAPI\\BudifyAPI.Users\\Controllers",
-    "\\API_Budgify\\BudgifyAPI\\BudifyAPI.Users\\Services"
+    "\\API_Budgify\\BudgifyAPI\\BudifyAPI.Users\\Models",
+    "\\API_Budgify\\BudgifyAPI\\BudifyAPI.Users\\Models\\USers",
+    "\\API_Budgify\\BudgifyAPI\\BudifyAPI.Users\\Models\\USers\\DBUsers",
+    "\\API_Budgify\\BudgifyAPI\\BudifyAPI.Users\\Models\\USers\\DBUsers\\CreateUSerHelper"
   ],
-  "SelectedNode": "\\API_Budgify\\BudgifyAPI\\BudgifyAPI.sln",
+  "SelectedNode": "\\API_Budgify\\BudgifyAPI\\BudifyAPI.Users\\Models\\USers\\DBUsers\\CreateUSerHelper\\CreateUser.cs",
   "PreviewInSolutionExplorer": false
 }

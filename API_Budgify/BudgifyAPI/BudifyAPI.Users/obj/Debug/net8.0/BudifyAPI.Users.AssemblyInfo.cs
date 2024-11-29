@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BudifyAPI.Users")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a824070c3f0bdfcccfa0a1bd8cc6231275c97ac4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d490bd1395c2c74df5fce2d3c335f8858aba9df2")]
 [assembly: System.Reflection.AssemblyProductAttribute("BudifyAPI.Users")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BudifyAPI.Users")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
