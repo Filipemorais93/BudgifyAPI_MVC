@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\API_Budgify",
+    "\\API_Budgify\\BudgifyAPI",
+    "\\API_Budgify\\BudgifyAPI\\BudifyAPI.Users",
+    "\\API_Budgify\\BudgifyAPI\\BudifyAPI.Users\\Controllers",
+    "\\API_Budgify\\BudgifyAPI\\BudifyAPI.Users\\Services"
+  ],
+  "SelectedNode": "\\API_Budgify\\BudgifyAPI\\BudgifyAPI.sln",
+  "PreviewInSolutionExplorer": false
+}

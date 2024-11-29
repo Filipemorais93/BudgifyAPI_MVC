@@ -1,22 +1,24 @@
-﻿using BudifyAPI.Users.Models.DB;
+﻿using BudifyAPI.Users.Models.USers.DBUsers;
+using BudifyAPI.Users.Models.USers.DBUsers.CreateUSerHelper;
+using BudifyAPI.Users.Models.USers.Helpers;
 
 namespace BudifyAPI.Users.Services
 {
     public interface IUsersService
     {
         //User-groups
-        Task<bool> AddUserGroup(UserGroup userGroup);
-        Task<bool> UpdateUserGroup(UserGroup userGroup);
-        Task<bool> DeleteUserGroup(UserGroup userGroup);
-        Task<bool> GetAllUserGroup(Guid userGroupId);
-        Task<bool> AddUserToUserGroup(User user);
-        Task<bool> DeleteUserFromUserGroup(User user);
+        Task<bool> AddUserGroup(CreateUserGroup name);
+        Task<bool> UpdateUserGroup(Guid userGroupId, CreateUserGroup name);
+        Task<bool> DeleteUserGroup(Guid userGroupId);
+        Task<UserGroup> GetUserGroup(Guid userGroupId);
+        Task<bool> AddUserToUserGroup(CreateUser createUser, Guid userId);
+        Task<bool> DeleteUserFromUserGroup(Guid userId);
         Task<bool> AddManagerToUserGroup(User user);
         Task<bool> DeleteManagerToUserGroup(User user);
 
         //Users
-        Task<bool> AddUser(User user);
-        Task<bool> UpdateUser(User user);
+        Task<bool> AddUser(CreateUser createUser);
+        Task<bool> UpdateUser(Guid userId, CreateUser createUser);
         Task<bool> DeleteUser(Guid userId);
         Task<List<User>> GetUsers();
         Task<User> GetUserById(Guid userId);
