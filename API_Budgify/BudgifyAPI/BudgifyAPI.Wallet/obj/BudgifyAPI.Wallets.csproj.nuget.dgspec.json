@@ -1,33 +1,29 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\FilipeMorais\\Documents\\MEI\\Relatórios\\BudgifyAPI_MVC\\API_Budgify\\BudgifyAPI\\BudgifyAPI.Wallet\\BudgifyAPI.Wallets.csproj": {}
+    "C:\\Users\\Filipe Morais\\Documents\\GitHub\\BudgifyAPI_MVC\\API_Budgify\\BudgifyAPI\\BudgifyAPI.Wallet\\BudgifyAPI.Wallets.csproj": {}
   },
   "projects": {
-    "C:\\Users\\FilipeMorais\\Documents\\MEI\\Relatórios\\BudgifyAPI_MVC\\API_Budgify\\BudgifyAPI\\BudgifyAPI.Wallet\\BudgifyAPI.Wallets.csproj": {
+    "C:\\Users\\Filipe Morais\\Documents\\GitHub\\BudgifyAPI_MVC\\API_Budgify\\BudgifyAPI\\BudgifyAPI.Wallet\\BudgifyAPI.Wallets.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\FilipeMorais\\Documents\\MEI\\Relatórios\\BudgifyAPI_MVC\\API_Budgify\\BudgifyAPI\\BudgifyAPI.Wallet\\BudgifyAPI.Wallets.csproj",
+        "projectUniqueName": "C:\\Users\\Filipe Morais\\Documents\\GitHub\\BudgifyAPI_MVC\\API_Budgify\\BudgifyAPI\\BudgifyAPI.Wallet\\BudgifyAPI.Wallets.csproj",
         "projectName": "BudgifyAPI.Wallets",
-        "projectPath": "C:\\Users\\FilipeMorais\\Documents\\MEI\\Relatórios\\BudgifyAPI_MVC\\API_Budgify\\BudgifyAPI\\BudgifyAPI.Wallet\\BudgifyAPI.Wallets.csproj",
-        "packagesPath": "C:\\Users\\FilipeMorais\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\FilipeMorais\\Documents\\MEI\\Relatórios\\BudgifyAPI_MVC\\API_Budgify\\BudgifyAPI\\BudgifyAPI.Wallet\\obj\\",
+        "projectPath": "C:\\Users\\Filipe Morais\\Documents\\GitHub\\BudgifyAPI_MVC\\API_Budgify\\BudgifyAPI\\BudgifyAPI.Wallet\\BudgifyAPI.Wallets.csproj",
+        "packagesPath": "C:\\Users\\Filipe Morais\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Filipe Morais\\Documents\\GitHub\\BudgifyAPI_MVC\\API_Budgify\\BudgifyAPI\\BudgifyAPI.Wallet\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\NuGet.Config",
-          "C:\\Users\\FilipeMorais\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Filipe Morais\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "https://api.nuget.org/v3/index.json": {},
-          "https://nuget.devexpress.com/T9PlFrFveKhhANAAe7QQzSVDtKS97EFZ4Sm4IxMlTKUbYPXQ4c/api": {}
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
@@ -43,9 +39,8 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+          "auditMode": "direct"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -99,7 +94,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\PROGRAM FILES\\DOTNET\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
