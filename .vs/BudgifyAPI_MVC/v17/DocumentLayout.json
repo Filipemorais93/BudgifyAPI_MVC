@@ -3,16 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Filipe Morais\\Documents\\GitHub\\BudgifyAPI_MVC\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Filipe Morais\\Documents\\GitHub\\BudgifyAPI_MVC\\API_Budgify\\BudgifyAPI\\BudifyAPI.Users\\Models\\USers\\DBUsers\\CreateUSerHelper\\CreateUser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:API_Budgify\\BudgifyAPI\\BudifyAPI.Users\\Models\\USers\\DBUsers\\CreateUSerHelper\\CreateUser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Filipe Morais\\Documents\\GitHub\\BudgifyAPI_MVC\\API_Budgify\\BudgifyAPI\\BudifyAPI.Users\\Services\\UsersService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:API_Budgify\\BudgifyAPI\\BudifyAPI.Users\\Services\\UsersService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Filipe Morais\\Documents\\GitHub\\BudgifyAPI_MVC\\API_Budgify\\BudgifyAPI\\BudifyAPI.Users\\Controllers\\UserController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:API_Budgify\\BudgifyAPI\\BudifyAPI.Users\\Controllers\\UserController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,37 +19,12 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "CreateUser.cs",
-              "DocumentMoniker": "C:\\Users\\Filipe Morais\\Documents\\GitHub\\BudgifyAPI_MVC\\API_Budgify\\BudgifyAPI\\BudifyAPI.Users\\Models\\USers\\DBUsers\\CreateUSerHelper\\CreateUser.cs",
-              "RelativeDocumentMoniker": "API_Budgify\\BudgifyAPI\\BudifyAPI.Users\\Models\\USers\\DBUsers\\CreateUSerHelper\\CreateUser.cs",
-              "ToolTip": "C:\\Users\\Filipe Morais\\Documents\\GitHub\\BudgifyAPI_MVC\\API_Budgify\\BudgifyAPI\\BudifyAPI.Users\\Models\\USers\\DBUsers\\CreateUSerHelper\\CreateUser.cs",
-              "RelativeToolTip": "API_Budgify\\BudgifyAPI\\BudifyAPI.Users\\Models\\USers\\DBUsers\\CreateUSerHelper\\CreateUser.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T20:41:43.878Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Users\\Filipe Morais\\Documents\\GitHub\\BudgifyAPI_MVC\\API_Budgify\\BudgifyAPI\\BudifyAPI.Users\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "API_Budgify\\BudgifyAPI\\BudifyAPI.Users\\Controllers\\UserController.cs",
-              "ToolTip": "C:\\Users\\Filipe Morais\\Documents\\GitHub\\BudgifyAPI_MVC\\API_Budgify\\BudgifyAPI\\BudifyAPI.Users\\Controllers\\UserController.cs",
-              "RelativeToolTip": "API_Budgify\\BudgifyAPI\\BudifyAPI.Users\\Controllers\\UserController.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAABsAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T08:42:11.682Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "UsersService.cs",
               "DocumentMoniker": "C:\\Users\\Filipe Morais\\Documents\\GitHub\\BudgifyAPI_MVC\\API_Budgify\\BudgifyAPI\\BudifyAPI.Users\\Services\\UsersService.cs",
               "RelativeDocumentMoniker": "API_Budgify\\BudgifyAPI\\BudifyAPI.Users\\Services\\UsersService.cs",
               "ToolTip": "C:\\Users\\Filipe Morais\\Documents\\GitHub\\BudgifyAPI_MVC\\API_Budgify\\BudgifyAPI\\BudifyAPI.Users\\Services\\UsersService.cs",
               "RelativeToolTip": "API_Budgify\\BudgifyAPI\\BudifyAPI.Users\\Services\\UsersService.cs",
-              "ViewState": "AgIAAFMAAACAMTMzMzMLwGEAAAAyAAAAAAAAAA==",
+              "ViewState": "AgIAAPsAAAAABgAAAAAcwA0BAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-28T08:41:50.465Z",
               "EditorCaption": ""
